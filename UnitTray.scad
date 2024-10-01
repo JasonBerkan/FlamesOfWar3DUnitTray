@@ -1,27 +1,29 @@
 include <InfantryBases.scad>
 
-depth = 2;
+tray_width = 200;
+tray_length = 170;
+tray_height = 3;
 difference()
 {
     // This defines the tray base.
-    cube([200, 200, 3]);
-    // This puts the first row of three bases into the tray base.
-    translate([10, 10, 1])
-        MediumBase(depth);
-    translate([65, 10, 1])
-        MediumBase(depth);
-    translate([120, 10, 1])
-        MediumBase(depth);
-    // This puts the second row of three bases into the tray base.
-    translate([10, 47, 1])
-        MediumBase(depth);
-    translate([65, 47, 1])
-        MediumBase(depth);
-    translate([120, 47, 1])
-        MediumBase(depth);
-    // This puts the small command teams into the tray base.
-    translate([65, 84, 1])
-        SmallBase(depth);
-    translate([65, 84, 1])
-        SmallBase(depth);
+    cube([tray_width, tray_length, tray_height]);
+    // First row - small command base.
+    translate([83.7, 37.6, tray_height-2])
+        SmallBase(tray_height-1);
+
+    // Second row - three medium bases.
+    translate([22.1, 65.2, tray_height-2])
+        MediumBase(tray_height-1);
+    translate([74.7, 65.2, tray_height-2])
+        MediumBase(tray_height-1);
+    translate([127.3, 65.2, tray_height-2])
+        MediumBase(tray_height-1);
+
+    // Third row - three medium bases.
+    translate([22.1, 99.8, tray_height-2])
+        MediumBase(tray_height-1);
+    translate([74.7, 99.8, tray_height-2])
+        MediumBase(tray_height-1);
+    translate([127.3, 99.8, tray_height-2])
+        MediumBase(tray_height-1);
 }
