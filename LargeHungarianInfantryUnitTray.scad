@@ -13,16 +13,21 @@ difference()
     Tray(tray_width, tray_length, tray_height);
 
     // Everything defined after the above call to Tray() will be cut out of the tray.
-    row1 = 34.1;
-    row2 = 68.7;
-    row3 = 103.3;
+    row1 = 16.8;
+    row2 = 51.4;
+    row3 = 86.0;
+    row4 = 120.6;
 
     column1 = 22.1;
     column2 = 74.7;
     column3 = 127.3;
 
-    // First row - one small command base.
+    // First row - one small command base, one small AT base and one medium HMG base.
+    translate([column1, row1, tray_height-2])
+        MediumBase(tray_height-1);
     translate([column2+9, row1, tray_height-2])
+        SmallBase(tray_height-1);
+    translate([column3+9, row1, tray_height-2])
         SmallBase(tray_height-1);
 
     // Second row - three medium bases.
@@ -39,6 +44,14 @@ difference()
     translate([column2, row3, tray_height-2])
         MediumBase(tray_height-1);
     translate([column3, row3, tray_height-2])
+        MediumBase(tray_height-1);
+
+    // Fourth row - three medium bases.
+    translate([column1, row4, tray_height-2])
+        MediumBase(tray_height-1);
+    translate([column2, row4, tray_height-2])
+        MediumBase(tray_height-1);
+    translate([column3, row4, tray_height-2])
         MediumBase(tray_height-1);
 
     // Put in the four holes on the bottom of the base for the supports to fit into.

@@ -1,5 +1,5 @@
-include <..\InfantryBases.scad>
 include <..\Supports.scad>
+include <..\InfantryBases.scad>
 
 tray_width = 20;
 tray_length = 50;
