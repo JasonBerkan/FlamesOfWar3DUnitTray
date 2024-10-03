@@ -23,23 +23,23 @@ difference()
 
     // First row - one small command base.
     translate([column2+9, row1, tray_height-2])
-        SmallBase(tray_height-1);
+        SmallInfantryBase(tray_height-1);
 
     // Second row - three medium bases.
     translate([column1, row2, tray_height-2])
-        MediumBase(tray_height-1);
+        MediumInfantryBase(tray_height-1);
     translate([column2, row2, tray_height-2])
-        MediumBase(tray_height-1);
+        MediumInfantryBase(tray_height-1);
     translate([column3, row2, tray_height-2])
-        MediumBase(tray_height-1);
+        MediumInfantryBase(tray_height-1);
 
     // Third row - three medium bases.
     translate([column1, row3, tray_height-2])
-        MediumBase(tray_height-1);
+        MediumInfantryBase(tray_height-1);
     translate([column2, row3, tray_height-2])
-        MediumBase(tray_height-1);
+        MediumInfantryBase(tray_height-1);
     translate([column3, row3, tray_height-2])
-        MediumBase(tray_height-1);
+        MediumInfantryBase(tray_height-1);
 
     // Put in the four holes on the bottom of the base for the supports to fit into.
     translate([10, 10, 0])

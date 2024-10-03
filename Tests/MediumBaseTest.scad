@@ -8,5 +8,5 @@ difference()
     cube([58, 40, 3]);
     // This puts a small command team indentation in the tray base.
     translate([4, 4, 1])
-        MediumBase(2);
+        MediumInfantryBase(2);
 }
