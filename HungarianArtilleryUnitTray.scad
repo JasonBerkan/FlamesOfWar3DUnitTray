@@ -1,5 +1,6 @@
 include <Tray.scad>
-include <InfantryBases.scad>
+include <GunBases.scad>
+include <TankBases.scad>
 
 tray_width = 200;
 tray_length = 170;
@@ -12,33 +13,28 @@ difference()
     Tray(tray_width, tray_length, tray_height);
 
     // Everything defined after the above call to Tray() will be cut out of the tray.
-    row1 = 34.1;
-    row2 = 68.7;
-    row3 = 103.3;
+    row1 = 15.2;
+    row2 = 90;
+    
+    column1 = 28.8;
+    column2 = 120.4;
 
-    column1 = 22.1;
-    column2 = 74.7;
-    column3 = 127.3;
-
-    // First row - one small command base.
-    translate([column2+9, row1, tray_height-2])
-        SmallInfantryBase(tray_height-1);
+    // First row - one small command base, one small AT base and one medium HMG base.
+    translate([column1, row1, tray_height-2])
+        LargeGunBase(tray_height-1);
+    translate([column2, row1, tray_height-2])
+        LargeGunBase(tray_height-1);
 
     // Second row - three medium bases.
     translate([column1, row2, tray_height-2])
-        MediumInfantryBase(tray_height-1);
+        LargeGunBase(tray_height-1);
     translate([column2, row2, tray_height-2])
-        MediumInfantryBase(tray_height-1);
-    translate([column3, row2, tray_height-2])
-        MediumInfantryBase(tray_height-1);
+        LargeGunBase(tray_height-1);
 
-    // Third row - three medium bases.
-    translate([column1, row3, tray_height-2])
-        MediumInfantryBase(tray_height-1);
-    translate([column2, row3, tray_height-2])
-        MediumInfantryBase(tray_height-1);
-    translate([column3, row3, tray_height-2])
-        MediumInfantryBase(tray_height-1);
+    // For this tray, we'll put the Toldi OP in the middle.
+    // My Toldi OP is a bit smaller than my other Toldi's, so need to adjust the size smaller.
+    translate([89.6, 66.35, tray_height-2])
+        ToldiTankBase(-0.5, 0, 2);
 
     // Put in the four holes on the bottom of the base for the supports to fit into.
     translate([10, 10, 0])

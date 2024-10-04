@@ -1,5 +1,4 @@
 include <Tray.scad>
-include <Supports.scad>
 include <InfantryBases.scad>
 
 tray_width = 200;
