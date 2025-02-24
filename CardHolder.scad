@@ -7,9 +7,9 @@ module CardHolder(height)
         // Make the main cube 2mm bigger on each side than 110 x 80.
         cube([114, 84, height]);
 
-        // Then cut out the middle, leaving a 1.5mm edge around the base.
-        translate([1.5, 1.5, 0])
-            cube([111, 81, height]);
+        // Then cut out the middle, leaving a 1mm edge around the base.
+        translate([1, 1, 0])
+            cube([112, 82, height]);
 
         translate([12, 0, 0])
             cube([90, 85, height]);
