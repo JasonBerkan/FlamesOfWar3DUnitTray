@@ -31,11 +31,6 @@ difference()
     translate([column2, row2, tray_height-2])
         LargeGunBase(tray_height-1);
 
-    // For this tray, we'll put the Toldi OP in the middle.
-    // My Toldi OP is a bit smaller than my other Toldi's, so need to adjust the size smaller.
-    translate([89.6, 66.35, tray_height-2])
-        ToldiTankBase(-0.5, 0, 2);
-
     // Put in the four holes on the bottom of the base for the supports to fit into.
     translate([10, 10, 0])
         SupportBottom();
